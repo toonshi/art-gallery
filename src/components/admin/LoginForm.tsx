@@ -9,7 +9,7 @@ import {TextInput} from '@astryxdesign/core/TextInput';
 import {Button} from '@astryxdesign/core/Button';
 import {Card} from '@astryxdesign/core/Card';
 import {Banner} from '@astryxdesign/core/Banner';
-import {site} from '@/lib/config';
+import {BrandName} from '../BrandName';
 import {createSupabaseBrowserClient} from '@/lib/supabase/browser';
 
 // Standalone auth page paints its own body background (no host shell).
@@ -52,7 +52,8 @@ export function LoginForm({next, isDemo}: {next: string; isDemo: boolean}) {
         <form onSubmit={submit} noValidate>
           <VStack gap={4} hAlign="stretch">
             <VStack gap={1} hAlign="center">
-              <Heading level={1}>{site.name} admin</Heading>
+              <BrandName size="lg" />
+              <Heading level={1}>Studio admin</Heading>
               <Text color="secondary">Sign in to manage artworks and orders</Text>
             </VStack>
             {isDemo ? (

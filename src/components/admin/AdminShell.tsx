@@ -3,14 +3,14 @@
 import type {ReactNode} from 'react';
 import {usePathname} from 'next/navigation';
 import {AppShell} from '@astryxdesign/core/AppShell';
-import {SideNav, SideNavHeading, SideNavItem, SideNavSection} from '@astryxdesign/core/SideNav';
+import {SideNav, SideNavItem, SideNavSection} from '@astryxdesign/core/SideNav';
 import {VStack} from '@astryxdesign/core/Layout';
 import {Text} from '@astryxdesign/core/Text';
 import {Button} from '@astryxdesign/core/Button';
 import {Banner} from '@astryxdesign/core/Banner';
 import {Icon} from '@astryxdesign/core/Icon';
 import {ExternalLink, Frame, LayoutDashboard, LogOut, ReceiptText} from 'lucide-react';
-import {site} from '@/lib/config';
+import {BrandName} from '../BrandName';
 import {signOut} from '@/lib/admin/actions';
 
 const items = [
@@ -46,7 +46,12 @@ export function AdminShell({
       }
       sideNav={
         <SideNav
-          header={<SideNavHeading heading={site.name} subheading="Studio admin" headingHref="/admin" />}
+          header={
+            <VStack gap={0} paddingInline={2} paddingBlockStart={2}>
+              <BrandName href="/admin" />
+              <Text type="supporting">Studio admin</Text>
+            </VStack>
+          }
           footer={
             <VStack gap={2} padding={2}>
               {email ? (

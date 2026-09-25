@@ -1,4 +1,4 @@
-# Arten — online gallery & shop
+# Nick Arts — online gallery & shop
 
 A storefront for selling one-of-a-kind original artworks, with an admin
 dashboard for the artist.

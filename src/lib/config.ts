@@ -3,7 +3,7 @@
  * storefront, the admin, and Stripe Checkout.
  */
 export const site = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME || 'Arten',
+  name: process.env.NEXT_PUBLIC_SITE_NAME || 'Nick Arts',
   tagline: 'Original paintings and works on paper',
   intro:
     'Every piece here is a one-of-a-kind original, painted in the studio and delivered across Kenya.',

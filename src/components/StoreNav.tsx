@@ -1,8 +1,8 @@
 'use client';
 
 import {usePathname} from 'next/navigation';
-import {TopNav, TopNavHeading, TopNavItem} from '@astryxdesign/core/TopNav';
-import {site} from '@/lib/config';
+import {TopNav, TopNavItem} from '@astryxdesign/core/TopNav';
+import {BrandName} from './BrandName';
 
 const links = [
   {href: '/', label: 'Home'},
@@ -14,7 +14,7 @@ export function StoreNav() {
   return (
     <TopNav
       label="Main"
-      heading={<TopNavHeading heading={site.name} headingHref="/" />}
+      heading={<BrandName href="/" />}
       endContent={links.map(link => (
         <TopNavItem
           key={link.href}
